@@ -1,0 +1,49 @@
+<!-- create_data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Data</title>
+    <!-- Add any additional styles or links to CSS files here -->
+</head>
+
+<body>
+
+    <h2>Create New Data</h2>
+    <form method="post" action="{% url 'create-data' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div>
+            {{ form.theme.label_tag }} {{ form.theme }}
+            {{ form.theme.errors }}
+        </div>
+        <div>
+            {{ form.title.label_tag }} {{ form.title }}
+            {{ form.title.errors }}
+        </div>
+        <div>
+            {{ form.content.label_tag }}
+            <textarea id="id_content" name="content">{{ form.content.value }}</textarea>
+            {{ form.content.errors }}
+        </div>
+        <div>
+            {{ form.last_modified.label_tag }} {{ form.last_modified }}
+            {{ form.last_modified.errors }}
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script>
+        var simplemde = new SimpleMDE({ element: document.getElementById("id_content") });
+    </script>
+
+</body>
+
+</html>

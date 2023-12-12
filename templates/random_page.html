@@ -1,0 +1,20 @@
+<!-- random_page.html -->
+{% load static %}
+ <!-- Assuming you have a base.html template for the base structure -->
+<link rel="stylesheet" href="{% static 'css/random.css' %}">
+{% block content %}
+  <h2>Random Page</h2>
+
+  {% if random_page %}
+    <div>
+      <h3>{{ random_page.title }}</h3>
+      <p>{{ random_page.content }}</p>
+      <p>Last Modified: {{ random_page.last_modified }}</p>
+
+    </div>
+  {% else %}
+    <p>No random page found</p>
+  {% endif %}
+
+  <a href="{% url 'random-page' %}">Another random page</a>
+{% endblock %}

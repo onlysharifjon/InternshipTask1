@@ -1,0 +1,80 @@
+/* Reset some default styles to ensure consistency */
+body, h1, h2, form, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+}
+
+/* Style the header (Wiki Internship) */
+h1 {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the form for creating new pages */
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form input fields and button */
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button[type="submit"] {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #005eaa;
+}
+
+/* Style the list of pages (currently commented out in the HTML) */
+/*
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
+*/
+
+/* Style the "No pages available" message */
+/*
+li:empty {
+    color: #777;
+}
+*/

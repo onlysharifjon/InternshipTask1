@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  load the static files -->
+{% load static %}
+<head>
+    <! -- connect static/css/adder.css -->
+    <link rel="stylesheet" href="{% static 'css/adder.css' %}">
+    <meta charset="UTF-8">
+    <title>Page List</title>
+</head>
+<body>
+    <h1>Wiki Internship</h1>
+
+    <!-- Display the form for creating new pages -->
+    <h2>Create a New Page</h2>
+    <form method="post" action="{% url 'create-page' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Page</button>
+    </form>
+
+    <!-- Display the list of pages -->
+<!--    <h2>Themes</h2>-->
+<!--    <ul>-->
+<!--        {% for page in all_pages %}-->
+<!--            <li>{{ page.the_title }}</li>-->
+<!--        {% empty %}-->
+<!--            <li>No pages available.</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+</body>
+</html>
+
