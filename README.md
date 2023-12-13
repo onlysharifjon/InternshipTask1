@@ -1,20 +1,20 @@
 ## Internship-Project-1
 ### Project Description
-#create a virtual environment
+# create a virtual environment
 
 ```
 python3 -m venv env
 ```
-#activate the virtual environment
+# activate the virtual environment
 
 ```
 source env/bin/activate
 ```
-#or
+# or
 ```
 ./env/Scripts/activate
 ```
-#install the requirements
+# install the requirements
 
 ```
 pip install -r requirements.txt
